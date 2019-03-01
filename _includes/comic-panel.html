@@ -1,6 +1,25 @@
 <div class="comic-panel">
     <div class="comic-content">
+      {% if panel.link %}
+      <a href={{panel.link}} class="comic-link">
+      {% endif %}
+      {% if panel.caption %}
       <div class="comic-caption">{{panel.caption}}</div>
+      {% endif %}
+      {% if panel.description %}
+      <div class="comic-overlay">
+        <div class="comic-description">{{panel.description}}</div>
+      </div>
+      {% endif %}
+      {% if panel.image %}
       <img src={{panel.image}}/>
+      {% else %}
+        {% if panel.link %}
+        {{panel.link}}
+        {% endif %}
+      {% endif %}
+      {% if panel.link %}
+      </a>
+      {% endif %}
     </div>
   </div>

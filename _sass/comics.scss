@@ -2,16 +2,19 @@
 :root {
   --comic-panel-width: 14rem;
   --comic-panel-height: 14rem;
+  --comic-panel-description-margin-top: 11rem;
   --flex-basis: 100%;
 
   @media screen and (min-width: 25em) {
     --comic-panel-width: 20rem;
     --comic-panel-height: 20rem;
+    --comic-panel-description-margin-top: 14rem;
   }
 
   @media screen and (min-width: 50em) {
     --comic-panel-width: 25rem;
-    --comic-panel-height: 25rem;    
+    --comic-panel-height: 25rem;
+    --comic-panel-description-margin-top: 19rem;
   }
 
   @media screen and (min-width: 107em) {
@@ -102,8 +105,8 @@
 .comic-content .comic-description {
   display: none;
   position: absolute;
-  margin-top: 19.0rem;
-  margin-left: 1.0rem;
+  margin-top: var(--comic-panel-description-margin-top);
+  margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   min-height: 4rem;

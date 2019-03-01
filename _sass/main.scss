@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers|Special+Elite");
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
+:root {
+  --background-color: green;
+  --main-margins: 2rem 2% 4rem 2%;
+
+  @media screen and (min-width: 35em) {
+    --main-margins: 2rem 5% 4rem 5%;
+  }
+
+  @media screen and (min-width: 50em) {
+    --main-margins: 2rem 10% 4rem 10%;
+  }
+}
+
+body {
+  font-family: "Special Elite", cursive;
+  background-color: var(--background-color);
+  // margin: 0;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: "Bangers", cursive;
+}
+
+// a:hover .textbox {
+//   display: inline;
+//   background-color: red;
+// }
+
+main {
+  margin: var(--main-margins);
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 8rem;
+  border-style: solid;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border-width: 4px;
+  background-color: white;
+  min-width: 14em;
+
+}

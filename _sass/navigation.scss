@@ -1,0 +1,141 @@
+:root {
+  --background-color: green;
+  --top-nav-font-size: 1.0rem;
+  --top-nav-background-color: orange;
+  --top-nav-display: block;
+  --top-nav-display-first-child: none;
+  --top-nav-display-children: none;
+  --top-nav-hover-font-size: 1.2rem;
+  --top-nav-hover-color: red;
+  --top-nav-hover-padding: 14px 16px;
+
+  --top-nav-float: left;
+  --top-nav-font-color: black;
+  --top-nav-hover-background-color: deepskyblue;
+  --top-nav-hover-background-image: none;
+  --top-nav-active-font-color: white;
+  --top-nav-active-background-color: #87CEEB;
+  --top-nav-display-icon: block;
+  --top-nav-responsive-float: none;
+
+  @media screen and (min-width: 25em) {
+    --top-nav-font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 50em) {
+    --top-nav-font-size: 1.5rem;
+    --top-nav-hover-font-size: 2.0rem;
+    --top-nav-display-icon: none;
+    --top-nav-display-first-child: block;
+    --top-nav-display-children: block;
+    --top-nav-hover-background-color: none;
+    --top-nav-hover-background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/electric.svg);
+    --top-nav-hover-padding: 2.5% 6% 3% 3%;
+    --top-nav-float: left;
+    --top-nav-responsive-float: left;
+  }
+
+  @media screen and (min-width: 107em) {
+    --flex-basis: auto;
+  }
+}
+
+.top-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border-width: 4px;
+  display: var(--top-nav-display);
+  overflow: hidden;
+  background-color: var(--top-nav-background-color);
+  position: relative;
+  min-height: 2.7rem;
+}
+
+// Use for 'home' button
+// nav.top-nav a:not(:first-child) {
+//   display: var(--top-nav-display-first-child);
+// }
+nav.top-nav a {
+  display: var(--top-nav-display-children);
+}
+a:hover .bangbangbang {
+  display: inline;
+  margin-left: 0px;
+  font-size: var(--top-nav-font-size);
+  color: var(--top-nav-hover-color);
+  font-weight: bold;
+  font-family: "Bangers", cursive;
+}
+.textbox,
+.bangbangbang {
+  display: none;
+}
+
+.top-nav a {
+  float: var(--top-nav-float);
+  text-align: center;
+  display: block;
+  font-size: var(--menu-font-size);
+  text-decoration: none;
+  color: var(--top-nav-font-color);
+  text-align: center;
+  padding: 14px 16px;
+}
+
+nav.top-nav a.icon {
+  float: right;
+  font-size: .9rem;
+}
+
+nav.top-nav.responsive {
+  position: relative;
+}
+
+nav.top-nav.responsive a.icon,
+nav.top-nav a.icon {
+  display: var(--top-nav-display-icon);
+  position: absolute;
+  right: 0;
+  top: 0;
+ }
+
+nav.top-nav.responsive a {
+  float: var(--top-nav-responsive-float);
+  display: block;
+  text-align: left;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+// REVISIT?
+// .top-nav .active {
+//   background-color: var(--top-nav-active-background-color);
+//   color: var(--top-nav-active-font-color);
+// }
+
+.top-nav a:hover {
+  background-color: var(--top-nav-hover-background-color);
+  color: var(--top-nav-hover-color);
+  text-transform: uppercase;
+  font-size: var(--top-nav-font-size);
+  font-weight: bold;
+  // Comic book speech bubble taken from:
+  // https://codepen.io/dudleystorey/pen/wMLBLK
+  // Should find something that works better.
+  background-image: var(--top-nav-hover-background-image);
+  // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg); 
+  padding: var(--top-nav-hover-padding);
+  font-family: "Bangers", cursive;
+}

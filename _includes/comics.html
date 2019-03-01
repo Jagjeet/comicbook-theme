@@ -1,0 +1,8 @@
+{% for comic in  site.comics %}
+  <h2>{{comic.title}}</h2>
+  <div class="comic"> 
+    {% for panel in comic.panels %}
+      {% include comic-panel.html %}
+    {% endfor %}
+  </div>
+{% endfor %}

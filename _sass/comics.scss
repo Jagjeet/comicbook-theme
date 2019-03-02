@@ -1,28 +1,31 @@
 
 :root {
-  --comic-panel-width: 14rem;
-  --comic-panel-height: 14rem;
+  --comic-panel-width: 17rem;
+  --comic-panel-height: 17rem;
   --comic-panel-description-margin-top: 11rem;
   --flex-basis: 100%;
   --comic-panels-grid-template-columns: 1fr;
   --comic-panels-grid-column-gap: 0rem;
 
   @media screen and (min-width: 25em) {
-    --comic-panel-width: 20rem;
-    --comic-panel-height: 20rem;
-    --comic-panel-description-margin-top: 14rem;
+    --comic-panel-width: 22rem;
+    --comic-panel-height: 22rem;
+    --comic-panel-description-margin-top: 15rem;
   }
 
   @media screen and (min-width: 50em) {
-    --comic-panel-width: 25rem;
-    --comic-panel-height: 25rem;
-    --comic-panel-description-margin-top: 19rem;
+    --comic-panel-width: 36rem;
+    --comic-panel-height: 36rem;
+    --comic-panel-description-margin-top: 29rem;
   }
 
   @media screen and (min-width: 107em) {
     --flex-basis: auto;
+    --comic-panel-description-margin-top: 19rem;
     --comic-panels-grid-template-columns: repeat(3, 1fr);
     --comic-panels-grid-column-gap: 2rem;
+    --comic-panel-width: 25rem;
+    --comic-panel-height: 25rem;
   }
 }
 .comic {
@@ -50,11 +53,11 @@
 
 .comic-panel {
   position: relative;
-  flex-basis: var(--flex-basis);
+  // flex-basis: var(--flex-basis);
   height: var(--comic-panel-height);
   width: var(--comic-panel-width);
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 
 .comic-content {

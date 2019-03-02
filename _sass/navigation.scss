@@ -1,13 +1,15 @@
 :root {
   --background-color: green;
-  --top-nav-font-size: 1.0rem;
+  --top-nav-min-height: 4.5rem;
+  --top-nav-font-size: 3.0rem;
   --top-nav-background-color: orange;
   --top-nav-display: block;
   --top-nav-display-first-child: none;
   --top-nav-display-children: none;
-  --top-nav-hover-font-size: 1.2rem;
+  --top-nav-hover-font-size: 2.0rem;
   --top-nav-hover-color: red;
   --top-nav-hover-padding: 14px 16px;
+  --top-nav-icon-font-size: 5.7rem;
 
   --top-nav-float: left;
   --top-nav-font-color: black;
@@ -19,11 +21,11 @@
   --top-nav-responsive-float: none;
 
   @media screen and (min-width: 25em) {
-    --top-nav-font-size: 1.3rem;
+    // --top-nav-font-size: 1.3rem;
   }
 
-  @media screen and (min-width: 50em) {
-    --top-nav-font-size: 1.5rem;
+  @media screen and (min-width: 62em) {
+    --top-nav-font-size: 2.0rem;
     --top-nav-hover-font-size: 2.0rem;
     --top-nav-display-icon: none;
     --top-nav-display-first-child: block;
@@ -33,6 +35,7 @@
     --top-nav-hover-padding: 2.5% 6% 3% 3%;
     --top-nav-float: left;
     --top-nav-responsive-float: left;
+    --top-nav-min-height: 3.5rem;
   }
 
   @media screen and (min-width: 107em) {
@@ -51,7 +54,7 @@
   overflow: hidden;
   background-color: var(--top-nav-background-color);
   position: relative;
-  min-height: 2.7rem;
+  min-height: var(--top-nav-min-height);
 }
 
 // Use for 'home' button
@@ -78,7 +81,7 @@ a:hover .bangbangbang {
   float: var(--top-nav-float);
   text-align: center;
   display: block;
-  font-size: var(--menu-font-size);
+  font-size: var(--top-nav-font-size);
   text-decoration: none;
   color: var(--top-nav-font-color);
   text-align: center;
@@ -87,7 +90,7 @@ a:hover .bangbangbang {
 
 nav.top-nav a.icon {
   float: right;
-  font-size: .9rem;
+  font-size: var(top-nav-icon-font-size);
 }
 
 nav.top-nav.responsive {

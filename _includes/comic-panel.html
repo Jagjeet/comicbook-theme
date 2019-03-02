@@ -12,7 +12,7 @@
       </div>
       {% endif %}
       {% if panel.image %}
-      <img src={{ panel.image | relative_url }}/>
+      <img src="{{ panel.image | relative_url }}"/>
       {% else %}
         {% if panel.link %}
         {{panel.link}}

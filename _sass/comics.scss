@@ -4,6 +4,8 @@
   --comic-panel-height: 14rem;
   --comic-panel-description-margin-top: 11rem;
   --flex-basis: 100%;
+  --comic-panels-grid-template-columns: 1fr;
+  --comic-panels-grid-column-gap: 0rem;
 
   @media screen and (min-width: 25em) {
     --comic-panel-width: 20rem;
@@ -19,37 +21,36 @@
 
   @media screen and (min-width: 107em) {
     --flex-basis: auto;
+    --comic-panels-grid-template-columns: repeat(3, 1fr);
+    --comic-panels-grid-column-gap: 2rem;
   }
 }
 .comic {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 2.5rem;
-  // border-style: solid;
-  // border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  // border-width: 4px;
 }
 .comic a {
   color: black;
 }
 .comic .title {
-  margin-top: 0.5rem;
-  margin-bottom: 0rem;
+  margin-top: 4.0rem;
+  margin-bottom: 0.5rem;
 }
 
 .comic-panels {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row wrap;
-  // justify-content: center;
+  display: inline-grid;
+  grid-template-columns: var(--comic-panels-grid-template-columns);
+  grid-row-gap: 2.0rem;
+  grid-column-gap: var(--comic-panels-grid-column-gap);
+  grid-auto-flow: row;
+  justify-items: center;
+  min-width: 100%;
 }
 
 .comic-panel {
   position: relative;
   flex-basis: var(--flex-basis);
-  margin: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
   height: var(--comic-panel-height);
   width: var(--comic-panel-width);
   display: flex;
@@ -68,7 +69,7 @@
   border-style: solid;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border-width: 4px;
-  margin: 0.5rem;
+  // margin: 0.5rem;
 }
 
 
@@ -98,7 +99,6 @@
   background-color: rgba(0,0,0,0.60);
   display: block;
   margin: 0.5rem;
-  // z-index: 3;
 }
 
 
@@ -117,7 +117,7 @@
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border-width: 4px;
   padding: 0.5rem;
-  background: yellow;
+  background: orange;
 }
 
 .comic-content:hover .comic-description {

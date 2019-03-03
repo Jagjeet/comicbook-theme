@@ -1,0 +1,45 @@
+// @include('base');
+
+:root {
+  --footer-background-color: orange;
+  --footer-height: 20rem;
+
+  @media screen and (min-width: 25em) {
+    --footer-height: 15rem;
+  }
+
+  @media screen and (min-width: 62em) {
+    --footer-height: 10rem;
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: var(--footer-background-color);
+  display: block;
+  width: 100%;
+  border-style: solid;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border-width: 4px
+}
+
+.footer .text {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: var(--footer-height);
+}
+
+.footer h6 {
+  text-align: center;
+  font-size: var(--font-size);
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  font-weight: bold;
+}

@@ -1,0 +1,4 @@
+---
+title: Bang
+layout: page
+---

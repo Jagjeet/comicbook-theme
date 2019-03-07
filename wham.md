@@ -1,0 +1,4 @@
+---
+title: Wham
+layout: page
+---

@@ -1,5 +1,21 @@
 ---
-layout: default
 ---
-
-{{ content }}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <script src="/assets/js/comicbook.js"></script>
+        {% seo %}
+      </head>
+  <body>
+    {% include navigation.html %}
+    <main>
+      <header>
+        <h1 class="title">{{page.title}}</h1>
+      </header>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

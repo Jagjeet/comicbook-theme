@@ -1,7 +1,7 @@
 <div class="comic-panel">
     <div class="comic-content">
       {% if panel.link %}
-      <a href={{panel.link}} class="comic-link">
+        <a href={{panel.link}} class="comic-link">
       {% endif %}
       {% if panel.caption %}
       <div class="comic-caption">{{panel.caption}}</div>
@@ -12,8 +12,12 @@
       </div>
       {% endif %}
       {% if panel.image %}
-      <img src="{{ panel.image }}"/>
-      {% else %}
+        {% if panel.altImageText == blank %}
+          <img src="{{ panel.image }}"/>
+        {% else %}
+          <img src="{{ panel.image }}" alt="{{ panel.altImageText }}"/>
+        {% endif %}
+
         {% if panel.link %}
         {{panel.link}}
         {% endif %}

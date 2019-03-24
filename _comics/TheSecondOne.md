@@ -11,3 +11,4 @@ panels:
    image: "https://picsum.photos/600/?random&time=674848"
    altImageText: A random image
 ---
+Here is the comic henceforth known as `The Second One`

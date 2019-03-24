@@ -14,3 +14,4 @@ panels:
    image: "https://picsum.photos/600/?random&time=123"
    altImageText: A random image
 ---
+Here is the comic henceforth known as `The Third One`

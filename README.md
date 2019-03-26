@@ -1,6 +1,6 @@
 # comicbook-theme
 
-This theme is inspired by web comics like [A Softer World](http://asofterworld.com).
+This theme is inspired by web comics like [A Softer World](http://asofterworld.com). It is currently being developed for a web portfolio, but could easily be used for other purposes. To see the theme in action, check out [The Design and Development Adventures of Jagjeet...](https://jagjeet.github.io/).
 
 ## Installation
 
@@ -26,7 +26,53 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+TODO: Write usage instructions here. Describe your available includes, sass and/or assets.
+
+### Layouts
+
+ * comics-default - This is the default comic layout. It can be used for homepages, etc as it shows the site title.
+ * comics-page - This is a comic layout for pages.
+ * comics-post - This is a comic layout for posts. (Note posts have not been tested at all!)
+ * default - default layout
+ * page - default page layout
+ * post - default post layout (Note posts have not been tested at all!)
+
+## Comics
+
+The primary functionality of this theme is to display panels of images with comic style captions. For more concrete examples, see the comic files in `_comics`.
+
+### Collection
+
+All comics should be placed in the `_comics` directory.
+
+### Structure
+Comics are specified in the front matter for each item in the collection. Comics currently use Jekyll's filename based ordering.
+
+```markdown
+title: Title goes here
+panels:
+ - caption: Caption goes here
+   image: Image link goes here
+   altImageText: Alt image text goes here
+   description: Optional text to be shown on hover goes here
+   link: Optional link to navigate to if the user clicks the panel
+ - caption: 2nd caption goes here
+   image: 2nd image link goes here
+   altImageText:  ...
+   description:  ...
+   link: ...
+categories: [featured, cats]
+```
+
+### Category
+
+Comic pages, posts, etc can optionally include a category to limit the page to only show that category. This can be down by adding `comicCategory` to the front matter. For example,
+
+`comicCategory: featured`
+
+limits the comics on the page to comics with the category "featured".
+
+Categories are optional. If no comicCategory is specified, all the comics will be displayed. Each comic can belong to zero more categories.
 
 ## Contributing
 

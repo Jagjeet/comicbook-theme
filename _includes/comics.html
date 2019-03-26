@@ -1,13 +1,20 @@
+{% for comic in comicDir %}
+  {% if comic.categories contains page.comicCategory %}
+    <h5 class="title">{{comic.categories}}</h5>
+  {% endif %}
+{% endfor %}
 {% for comic in  site.comics %}
-  <div class="comic">
-    <h5 class="title">{{comic.title}}</h5>
-    <div class="comic-panels">
-    {% for panel in comic.panels %}
-      {% include comic-panel.html %}
-    {% endfor %}
-    </div>
-    <div class="comic-content">
-      {{comic.content}}
-    </div>
-  </div>
+  {% if page.comicCategory == nil or  comic.categories contains page.comicCategory %}
+      <div class="comic">
+        <h5 class="title">{{comic.title}}</h5>
+        <div class="comic-panels">
+        {% for panel in comic.panels %}
+          {% include comic-panel.html %}
+        {% endfor %}
+        </div>
+        <div class="comic-content">
+          {{comic.content}}
+        </div>
+      </div>
+  {% endif %}
 {% endfor %}

@@ -3,3 +3,12 @@ theme: comicbook-theme
 
 collections:
   comics:
+    output: false
+    permalink: /comics/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "comics"
+    values:
+      layout: comic-post

@@ -1,5 +1,5 @@
 ---
 title: Bam
-layout: comics
+layout: comics-page
 comicCategory: bam
 ---

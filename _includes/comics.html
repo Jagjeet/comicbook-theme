@@ -1,8 +1,3 @@
-{% for comic in comicDir %}
-  {% if comic.categories contains page.comicCategory %}
-    <h5 class="title">{{comic.categories}}</h5>
-  {% endif %}
-{% endfor %}
 {% for comic in  site.comics %}
   {% if page.comicCategory == nil or  comic.categories contains page.comicCategory %}
       {% include comic.html title=comic.title panels=comic.panels content=comic.content %}

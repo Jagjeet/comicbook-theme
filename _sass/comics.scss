@@ -92,7 +92,7 @@
   padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
 
-.comic-panel-content:hover .comic-overlay {
+.comic-panel-content .comic-overlay {
   position: absolute;
   border-style: solid;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -105,11 +105,13 @@
   bottom: 0;
   background-color: rgba(0,0,0,0.60);
   display: block;
+  visibility: hidden;
 }
 
 
 .comic-panel-content .comic-description {
-  display: none;
+  display: block;
+  visibility: hidden;
   position: absolute;
   margin-top: var(--comic-panel-description-margin-top);
   margin-left: 0.5rem;
@@ -126,6 +128,31 @@
   background: orange;
 }
 
-.comic-panel-content:hover .comic-description {
-  display: block;
+@media (any-hover: hover) {
+  .comic-panel-content:hover .comic-overlay,
+  .comic-panel-content:hover .comic-description {
+    visibility: visible;
+  }
+}
+
+@media (any-hover: none) {
+  .comic-panel .comic-panel-content .comic-overlay-animate,
+  .comic-panel .comic-panel-content .comic-description-animate {
+    animation-name: wait-fade-in;
+    animation-duration: 3s;
+    display: block;
+    visibility: visible;
+  }
+
+  @keyframes wait-fade-in {
+    0% {
+        opacity: 0;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

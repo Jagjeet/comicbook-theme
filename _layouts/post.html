@@ -1,5 +1,21 @@
 ---
-layout: default
 ---
-
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/comicbook.js"></script>
+    {% seo %}
+  </head>
+  <body ontouchstart="">
+    {% include navigation.html %}
+    <main>
+      <header>
+       {% include breadcrumbs.html %}
+      </header>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

@@ -160,4 +160,12 @@ nav.top-nav.responsive a {
     font-family: "Bangers", cursive;
   }
 
+  a:active .bangbangbang {
+    display: inline;
+    margin-left: 0px;
+    font-size: var(--top-nav-font-size);
+    color: var(--top-nav-hover-color);
+    font-weight: bold;
+    font-family: "Bangers", cursive;
+  }
 }

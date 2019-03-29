@@ -10,7 +10,9 @@
     {% include navigation.html %}
     <main>
       <header>
-        {% if site.url %}
+        {% if site.github.url %}
+          <h1 class="title"><a href={{site.github.url}} class="site-link">{{site.title}}</a></h1>
+        {% elseif site.url %}
           <h1 class="title"><a href={{site.url}} class="site-link">{{site.title}}</a></h1>
         {% else %}
           <h1 class="title">{{site.title}}</h1>

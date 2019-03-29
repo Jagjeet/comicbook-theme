@@ -10,7 +10,11 @@
     {% include navigation.html %}
     <main>
       <header>
-        <h1 class="title">{{site.title}}</h1>
+        {% if site.url %}
+          <h1 class="title"><a href={{site.url}} class="site-link">{{site.title}}</a></h1>
+        {% else %}
+          <h1 class="title">{{site.title}}</h1>
+        {% endif %}
       </header>
       {{ content }}
     </main>

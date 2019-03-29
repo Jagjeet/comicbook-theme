@@ -50,6 +50,13 @@ main {
 
 }
 
+.site-link:visited,
+.site-link:active,
+.site-link {
+  color: black;
+  text-decoration: none;
+}
+
 #breadcrumbs {
   margin-top: 1rem;
   margin-bottom: 1rem;

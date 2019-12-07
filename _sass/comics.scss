@@ -19,13 +19,13 @@
     --comic-panel-description-margin-top: 29rem;
   }
 
-  @media screen and (min-width: 107em) {
+  @media screen and (min-width: 87em) {
     --flex-basis: auto;
     --comic-panel-description-margin-top: 19rem;
     --comic-panels-grid-template-columns: repeat(3, 1fr);
     --comic-panels-grid-column-gap: 2rem;
-    --comic-panel-width: 25rem;
-    --comic-panel-height: 25rem;
+    --comic-panel-width: 20rem;
+    --comic-panel-height: 20rem;
   }
 }
 .comic {

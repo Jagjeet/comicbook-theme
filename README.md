@@ -74,6 +74,14 @@ limits the comics on the page to comics with the category "featured".
 
 Categories are optional. If no comicCategory is specified, all the comics will be displayed. Each comic can belong to zero more categories.
 
+## Analytics
+
+Analytics can be added by adding your google measurement ID to your Jekyll site's `_config.yml`:
+
+```ruby
+google_analytics: G-XXXXXXXXXX
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
